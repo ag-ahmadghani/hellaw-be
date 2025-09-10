@@ -20,6 +20,9 @@ app.get('/', (req, res) => {
 const agendaRoutes = require('./routes/agendaRoutes');
 app.use('/api/agendas', agendaRoutes);
 
+const galeryRoutes = require('./routes/galeryRoutes');
+app.use('/api/galerys', galeryRoutes);
+
 // Listener
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

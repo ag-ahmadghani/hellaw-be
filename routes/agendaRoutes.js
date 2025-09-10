@@ -9,10 +9,10 @@ const {
 } = require('../controllers/agendaController');
 
 // Routes
-router.get('/', getAgendas);          // GET all agendas
-router.get('/:id', getAgendaById);    // GET agenda by ID
-router.post('/', createAgenda);       // CREATE new agenda
-router.put('/:id', updateAgenda);     // UPDATE agenda by ID
-router.delete('/:id', deleteAgenda);  // DELETE agenda by ID
+router.get('/', getAgendas);         
+router.get('/:id', getAgendaById); 
+router.post('/', createAgenda);     
+router.put('/:id', updateAgenda);     
+router.delete('/:id', deleteAgenda);  
 
 module.exports = router;
