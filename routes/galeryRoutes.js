@@ -11,7 +11,11 @@ router.post(
   galeryController.upload.single("image"),
   galeryController.createGalery
 );
-router.put("/:id", galeryController.updateGalery);
+router.put(
+  "/:id", 
+  galeryController.upload.single("image"),
+  galeryController.updateGalery
+);
 router.delete("/:id", galeryController.deleteGalery);
 
 module.exports = router;
