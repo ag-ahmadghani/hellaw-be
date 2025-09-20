@@ -20,6 +20,11 @@ app.get('/', (req, res) => {
   res.send('API Hellaw berjalan 🚀');
 });
 
+// Listener
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
+
 // Routes
 const agendaRoutes = require('./routes/agendaRoutes');
 app.use('/api/agendas', agendaRoutes);
@@ -27,7 +32,5 @@ app.use('/api/agendas', agendaRoutes);
 const galeryRoutes = require('./routes/galeryRoutes');
 app.use('/api/galerys', galeryRoutes);
 
-// Listener
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+const crewRoutes = require('./routes/crewRoutes');
+app.use('/api/crews', crewRoutes);
